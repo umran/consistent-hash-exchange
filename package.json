@@ -1,0 +1,24 @@
+{
+  "name": "consistent-hash-exchange",
+  "version": "0.0.1",
+  "description": "An internal message exchange that distributes asynchronous requests into serializable, but concurrently running queues using consistent hashing as the routing mechanism",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umran/consistent-hash-exchange.git"
+  },
+  "keywords": [
+    "consistent",
+    "hash",
+    "exchange"
+  ],
+  "author": "Ahmed Umran Hussain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umran/consistent-hash-exchange/issues"
+  },
+  "homepage": "https://github.com/umran/consistent-hash-exchange#readme"
+}
