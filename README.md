@@ -2,7 +2,7 @@
 
 An internal message exchange that distributes asynchronous requests into serializable, but concurrently running queues using consistent hashing as the routing mechanism.
 
-# Usage
+## Usage
 
 ```javascript
 const Exchange = require('consistent-hash-exchange')
@@ -32,6 +32,6 @@ exchange.once(replyToken, result => {
 })
 ```
 
-# Guarantees
+## Guarantees
 
 Since the exchange uses consistent hashing, every job enqueued with the same routingKey ends up in the same queue. That way, partial ordering of requests based on their routing key can be achieved while maintaing a desired level of concurrency.
