@@ -2,6 +2,10 @@
 
 An internal message exchange that distributes asynchronous requests into serializable, but concurrently running queues using consistent hashing as the routing mechanism.
 
+## Guarantees
+
+Since the exchange uses consistent hashing, every job enqueued with the same routingKey ends up in the same queue. That way, partial ordering of requests based on their routing key can be achieved while maintaing a desired level of concurrency.
+
 ## Usage
 
 ```javascript
@@ -31,7 +35,3 @@ exchange.once(replyToken, result => {
   console.log(result)
 })
 ```
-
-## Guarantees
-
-Since the exchange uses consistent hashing, every job enqueued with the same routingKey ends up in the same queue. That way, partial ordering of requests based on their routing key can be achieved while maintaing a desired level of concurrency.
